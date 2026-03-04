@@ -21,15 +21,13 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Project Advisor
 
-### Jane Doe
+### Gracia Chew
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/gracias022.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/gracias022)]
 
-* Role: Team Lead
-* Responsibilities: UI
+* Role: Team Member
 
 ### Johnny Doe
 
