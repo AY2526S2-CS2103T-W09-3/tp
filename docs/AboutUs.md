@@ -45,11 +45,11 @@ We are a team based in the [School of Computing, National University of Singapor
 * Role: Developer
 * Responsibilities: Function
 
-### James Doe
+### Chen Haozhe
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/chenzmxy.png" width="200px">
 
-[[github](http://github.com/johndoe)]
+[[github](https://github.com/chenzmxy)]
 [[portfolio](team/johndoe.md)]
 
 * Role: Developer
