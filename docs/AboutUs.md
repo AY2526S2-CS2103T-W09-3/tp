@@ -23,7 +23,8 @@ We are a team based in the [School of Computing, National University of Singapor
 
 [[github](http://github.com/gracias022)]
 
-* Role: Team Member
+* Role: Developer
+* Responsibilities: Deliverables
 
 ### Tricia Chew
 
