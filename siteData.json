@@ -40,7 +40,7 @@
       "src": "DeveloperGuide.md",
       "title": "Developer Guide",
       "headings": {
-        "ab-3-developer-guide": "AB-3 Developer Guide",
+        "bznus-developer-guide": "BZNUS Developer Guide",
         "acknowledgements": "Acknowledgements",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
@@ -107,15 +107,17 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "ab-3-user-guide": "AB-3 User Guide",
+        "bznus-user-guide": "BZNUS User Guide",
         "quick-start": "Quick start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
-        "adding-a-person-add": "Adding a person: add",
-        "listing-all-persons-list": "Listing all persons : list",
-        "editing-a-person-edit": "Editing a person : edit",
-        "locating-persons-by-name-find": "Locating persons by name: find",
-        "deleting-a-person-delete": "Deleting a person : delete",
+        "adding-a-customer-add": "Adding a customer: add",
+        "listing-all-customers-list": "Listing all customers : list",
+        "editing-a-customer-edit": "Editing a customer : edit",
+        "locating-customers-by-name-find": "Locating customers by name: find",
+        "deleting-a-customer-delete": "Deleting a customer : delete",
+        "adding-an-order-order": "Adding an order: order",
+        "deleting-an-order-delete-o": "Deleting an Order: delete-o",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
@@ -131,7 +133,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "bznus": "BZNUS"
       },
       "headingKeywords": {}
     },
