@@ -289,58 +289,162 @@ _{Explain here how the data archiving feature will be implemented}_
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                 | So that I can…​                                                        |
-|----------|--------------------------------------------|------------------------------|------------------------------------------------------------------------|
-| `* * *`  | new user                                   | see usage instructions       | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person             |                                                                        |
-| `* * *`  | user                                       | delete a person              | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name        | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name         | locate a person easily                                                 |
-
-*{More to be added}*
+| Priority | As a …​                    | I want to …​                                                                  | So that I can…​                                                    |
+|----------|----------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| `* * *`  | First-time user            | Save the contact information of customers                                     | Keep the contacts within my device locally                         |
+| `* * *`  | A user with many customers | Search for specific customers                                                 | Save time retrieving customer details                              |
+| `* * *`  | Home-based F&B seller      | Edit my customer information                                                  | Update addresses or contact numbers when they change.              |
+| `* * *`  | Home-based F&B seller      | Delete client profiles                                                        | Remove customers who no longer order from me                       |
+| `* * *`  | Home-based F&B seller      | View all my customers in a list                                               | View my customer base at a glance                                  |
+| `* * *`  | Home-based F&B seller      | Tag my customers with categories                                              | Identify them easily                                               |
+| `* * *`  | Home-based F&B seller      | Record dietary restrictions of each customer                                  | Avoid making products that are potentially harmful for them        |
+| `* * *`  | User                       | Edit order information                                                        | Enter order details for a specific customer when an order comes in |
+| `* *`    | Busy user                  | Track all upcoming food orders                                                | Prevent myself from forgetting orders                              |
+| `* *`    | User                       | Upload a picture with the contact                                             | Recognise them by face                                             |
+| `* *`    | Home-based F&B seller      | Add special notes for each user (“prefers weekend delivery”, “no chilli” etc) | Deliver a more personalised service                                |
+| `*`      | Home-based F&B seller      | Have another section for the contact details of ingredient suppliers          | Have a clear separation between customers and ingredient providers |
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `BZNUS` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: UC01 - Add Customer**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1. Seller chooses to add a new customer.
 
-    Use case ends.
+2. BZNUS requests for the customer details.
+
+3. Seller enters the requested details.
+
+4. BZNUS saves the contact information.
+
+Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+- 3a. BZNUS detects invalid or missing mandatory data (e.g., blank name). 
 
+  - 3a1. BZNUS requests for the correct data.
+
+  - 3a2. Seller enters new data.
+
+  - Steps 3a1-3a2 are repeated until the data entered are correct.
+
+    Use case resumes from step 4.
+
+- *a. At any time, Seller chooses to cancel adding a customer.
+
+  - *a1. BZNUS discards the input and returns to the previous view.
+
+    Use case ends.
+
+---
+
+**Use case: UC02 - Delete Customer**
+
+**MSS:**
+
+1. User chooses to delete a specific customer profile.
+
+2. BZNUS requests for confirmation to delete.
+
+3. User confirms the deletion.
+
+4. BZNUS deletes the customer profile and removes them from the list.
+   Use case ends.
+
+**Extensions:**
+
+- *a. At any time, User chooses to cancel the deletion.
+  - *a1. BZNUS cancels the deletion process and returns to the previous view.
   Use case ends.
 
-* 3a. The given index is invalid.
+---
 
-    * 3a1. AddressBook shows an error message.
+**Use case: UC03 - Edit Customer**
 
-      Use case resumes at step 2.
+**MSS:**
 
-*{More to be added}*
+1. User chooses to edit a specific customer profile.
+
+2. BZNUS displays the current contact details and allows editing.
+
+3. User enters the updated details.
+
+4. User saves the changes.
+
+5. BZNUS updates the profile and displays the revised details.
+
+   Use case ends.
+
+**Extensions:**
+
+- 3a. BZNUS detects invalid data (e.g., letters in a phone number field).
+
+    - 3a1. BZNUS requests for the correct data.
+  
+    - 3a2. Seller enters new data.
+  
+    - Steps 3a1-3a2 are repeated until the data entered are correct.
+
+    Use case resumes from step 4.
+
+--- 
+
+**Use case: UC04 - Add tags to customers**
+
+**MSS:**
+
+1. User chooses to add tags to a specific customer profile.
+
+2. User inputs the desired tags (e.g., "corporate", "vegan", "weekend delivery").
+
+3. User saves the tags.
+
+4. BZNUS updates the customer profile to display the new tags.
+
+   Use case ends.
+
+---
+
+**Use case: UC05 - Search customer information**
+
+**MSS:**
+
+1. User enters search keywords (e.g., name, phone number, delivery address).
+
+2. BZNUS retrieves and displays a list of customer profiles matching the keywords.
+
+   Use case ends.
+
+**Extensions:**
+
+- 2a. BZNUS detects no matching customers for the entered keyword.
+
+    - 2a1. BZNUS displays a message indicating no results were found.
+
+      Use case ends.
 
 ### Non-Functional Requirements
 
 1.  Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
 2.  Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
 3.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
-
-*{More to be added}*
+4.  All customer and order data should be saved locally on the user's device in a readable text file.
+5.  Commands should execute and display results within 2 seconds.
+6.  The interface should be intuitive enough that a home-based F&B seller with basic computer literacy can navigate the system without needing a comprehensive training manual.
+7.  The system should handle invalid user inputs gracefully without crashing, instead displaying clear and helpful error messages.
 
 ### Glossary
 
 * **Mainstream OS**: Windows, Linux, Unix, MacOS
 * **Private contact detail**: A contact detail that is not meant to be shared with others
+* **Home-based F&B seller**: The primary user of BZNUS, an individual running a small-scale food and beverage operation from their home.
+* **Tag**: A customizable, color-coded label assigned to a customer to quickly identify specific traits, preferences, or dietary restrictions (e.g., "vegan", "VIP", "corporate").
+* **CLI (Command Line Interface)**: A text-based user interface used to interact with the software by typing commands.
+* **JSON (JavaScript Object Notation)**: A lightweight, text-based, human-readable format used for storing the application's data locally.
 
 --------------------------------------------------------------------------------------------------------------------
 
