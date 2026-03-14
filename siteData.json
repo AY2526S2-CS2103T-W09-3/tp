@@ -118,6 +118,7 @@
         "deleting-a-customer-delete": "Deleting a customer : delete",
         "adding-an-order-order": "Adding an order: order",
         "deleting-an-order-delete-o": "Deleting an Order: delete-o",
+        "search-for-orders-based-on-certain-keywords-find-o": "Search for Orders based on certain keywords: find-o",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
