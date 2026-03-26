@@ -121,6 +121,7 @@
         "order-commands": "Order Commands",
         "adding-an-order-order": "Adding an order : order",
         "finding-orders-find-o": "Finding orders : find-o",
+        "editing-an-order-edit-o": "Editing an order : edit-o",
         "listing-all-orders-list-o": "Listing all orders : list-o",
         "deleting-an-order-delete-o": "Deleting an order : delete-o",
         "other-commands": "Other Commands",
