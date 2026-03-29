@@ -15,10 +15,20 @@ Class UserPrefs
 Class UniquePersonList
 Class Person
 Class Address
-Class Email
 Class Name
 Class Phone
+Class Facebook
+Class Instagram
 Class Tag
+Class Remark
+Class UUId
+
+Class OrderList
+Class Order
+Class Item
+Class DeliveryTime
+Class Quantity
+Class Status
 
 Class I #FFFFFF
 }
@@ -36,19 +46,40 @@ ModelManager -right-> "1" UserPrefs
 UserPrefs .up.|> ReadOnlyUserPrefs
 
 AddressBook *--> "1" UniquePersonList
+AddressBook *--> "1" OrderList
+
 UniquePersonList --> "~* all" Person
-Person *--> Name
-Person *--> Phone
-Person *--> Email
-Person *--> Address
+OrderList --> "~* all" Order
+
+Person *--> "1" Name
+Person *--> "0..1" Phone
+Person *--> "0..1" Facebook
+Person *--> "0..1" Instagram
+Person *--> "0..1" Address
+Person *--> "0..1" Remark
 Person *--> "*" Tag
+Person *--> "1" UUId
 
 Person -[hidden]up--> I
+Order -[hidden]up--> I
+Order -[hidden]right-> Person
 UniquePersonList -[hidden]right-> I
+OrderList -[hidden]right UniquePersonList
 
 Name -[hidden]right-> Phone
-Phone -[hidden]right-> Address
-Address -[hidden]right-> Email
+Phone -[hidden]right-> Facebook
+Facebook -[hidden]right-> Instagram
+Tag -[hidden]right-> Remark
+
+Order *--> "1" UUId : customerId
+Order *--> "0..1" Address
+Order *--> "1" Item
+Order *--> "1" DeliveryTime
+Order *--> "1" Quantity
+Order *--> "0..1" Status
 
 ModelManager --> "~* filtered" Person
+ModelManager --> "~* filtered" Order
+
+
 @enduml
