@@ -63,11 +63,18 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
+        "adding-a-customer": "Adding a customer",
+        "editing-a-customer": "Editing a customer",
         "deleting-a-customer": "Deleting a customer",
         "adding-an-order": "Adding an order",
         "deleting-an-order": "Deleting an order",
         "saving-data": "Saving data",
-        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
+        "appendix-effort": "Appendix: Effort",
+        "scope-expansion-and-technical-complexity": "Scope expansion and technical complexity",
+        "main-implementation-challenges": "Main implementation challenges",
+        "code-reuse": "Code Reuse",
+        "achievements": "Achievements"
       },
       "headingKeywords": {}
     },
