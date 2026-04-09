@@ -52,6 +52,7 @@
         "common-classes": "Common classes",
         "implementation": "Implementation",
         "order-management": "Order management",
+        "editing-data-feature-edit-and-edit-o": "Editing data feature (edit and edit-o)",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
